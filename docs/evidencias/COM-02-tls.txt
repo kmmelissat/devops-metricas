@@ -1,0 +1,12 @@
+# 2026-11-04  curl -svI https://notifier-melissa-esen.northcentralus.cloudapp.azure.com/   (sin -k)
+*  subject: CN=notifier-melissa-esen.northcentralus.cloudapp.azure.com
+*  expire date: Feb  2 03:57:42 2027 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=YR2
+*  SSL certificate verify ok.
+< HTTP/2 404          (sin app publicada todavía bajo /dev ni /prod; el certificado es lo que se verifica)
+
+# curl -sI http://notifier-melissa-esen.northcentralus.cloudapp.azure.com/   (HTTP redirige a HTTPS)
+HTTP/1.1 308 Permanent Redirect
+Location: https://notifier-melissa-esen.northcentralus.cloudapp.azure.com/
+
+# El certificado se emitió el 2026-11-04 y sigue válido tras apagar y encender la VM (acme.json persiste).

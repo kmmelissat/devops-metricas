@@ -1,0 +1,12 @@
+# 2026-11-04  kubectl get nodes -o wide / get pods -A  (tras encender la VM desde Infra ops: start)
+NAME          STATUS   ROLES                  AGE    VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+vm-notifier   Ready    control-plane,master   138m   v1.31.4+k3s1   10.10.1.4     <none>        Ubuntu 24.04.5 LTS   7.0.0-1017-azure   containerd://1.7.23-k3s2
+
+NAMESPACE     NAME                                      READY   STATUS      RESTARTS      AGE
+kube-system   coredns-ccb96694c-8m9nn                   1/1     Running     1 (23s ago)   138m
+kube-system   helm-install-traefik-6559n                0/1     Completed   0             88m
+kube-system   helm-install-traefik-crd-k9mll            0/1     Completed   0             138m
+kube-system   local-path-provisioner-5cf85fd84d-gq7wc   1/1     Running     1 (23s ago)   138m
+kube-system   metrics-server-5985cbc9d7-qgttt           0/1     Running     1 (23s ago)   138m
+kube-system   svclb-traefik-77f8f4d7-kbppz              2/2     Running     2 (23s ago)   138m
+kube-system   traefik-956d7d65f-5vt6m                   1/1     Running     1 (23s ago)   88m
